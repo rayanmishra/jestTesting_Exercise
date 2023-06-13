@@ -25,7 +25,10 @@ describe('cleanNumbers()', () => {
   it('should return an array of numbers from an array of string numbers', () => {
     const numberValues = ['1', '2'];
 
+    // testing with toBe
     expect(cleanNumbers(numberValues)[0]).toBeTypeOf('number');
+    // Testing with toEqual for object
+    expect(cleanNumbers(numberValues)).toEqual([1, 2]);
   });
 
   it('should throw an error if an array with atleast one empty string is provided', () => {
